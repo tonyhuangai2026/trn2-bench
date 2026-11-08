@@ -120,6 +120,21 @@
   chunked prefill 限 batch=1、无 continuous batching 调参、无量化）。属 vLLM-Neuron 开箱水平，而非极限。
 - 编译成本显著：首次 trace+编译 20–40 min/模型/配置（NVMe 上的 neuron-cache 可复用）。
 
+### 5.1 DeepSeek MoE 原版兼容性调研（2026-11-08）
+
+结论：**DeepSeek V4 / V4.1-Flash 目前在 Trainium 上无任何可用推理路径；V3/R1 原版可走 NxD Inference 但需另行安排**。
+
+| 路径 | 版本 | DeepSeek 支持 | 实测/依据 |
+|---|---|---|---|
+| vLLM-Neuron | 0.29.0.1.2.0（已是 PyPI 最新） | ❌ 架构白名单仅 `LlamaForCausalLM` / `Qwen3ForCausalLM` / `GptOssForCausalLM` | 实测加载 V4-Flash-0731 被拒：`deepseek_v4_fp8 quantization is currently not supported in neuron` |
+| NxD Inference | 0.10.18399（最新） | ⚠️ 仅 DeepSeek **V3 系**（含 MLA 的 `DeepseekV3Attention`），可跑 V3/R1 671B | 包内 `models/deepseek/modeling_deepseek.py`，无任何 V4 代码 |
+| 其他（社区） | — | ❌ 未发现针对 Trainium 的第三方 DeepSeek V4 实现 | — |
+
+- 本报告用 **R1-Distill-Llama-70B** 代表 DeepSeek，是受支持架构中唯一的官方 DeepSeek 模型
+  （R1-Distill-Qwen 系为 Qwen2 架构，同样不在白名单）。
+- 跑 V3/R1 671B 原版的前置条件：FP8 权重 ~700 GB 需提前下载（本 block 剩余时间不够），
+  NxDI 路径编译时间 1h 级，建议预留 ≥12h 的 capacity block 并考虑 trn2u/UltraServer。
+
 ## 6. 与 AWS 官方规格核对
 
 官方数据来源：AWS Neuron 文档 Trainium2 架构页、aws.amazon.com/ec2/instance-types/trn2/（2026-11-08 查证）。
