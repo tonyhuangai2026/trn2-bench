@@ -1,0 +1,16 @@
+{"rank": 1, "world": 4, "bench": "stream", "kernel": "copy", "dtype": "fp32", "mb": 1024, "GBps": 80.65260905121806}
+{"rank": 0, "world": 4, "bench": "stream", "kernel": "copy", "dtype": "fp32", "mb": 1024, "GBps": 80.76305348472651}
+{"rank": 3, "world": 4, "bench": "stream", "kernel": "copy", "dtype": "fp32", "mb": 1024, "GBps": 81.41696076429214}
+{"rank": 2, "world": 4, "bench": "stream", "kernel": "copy", "dtype": "fp32", "mb": 1024, "GBps": 80.86800528004048}
+{"rank": 3, "world": 4, "bench": "stream", "kernel": "scale", "dtype": "fp32", "mb": 1024, "GBps": 162.3898482807711}
+{"rank": 1, "world": 4, "bench": "stream", "kernel": "scale", "dtype": "fp32", "mb": 1024, "GBps": 162.08190212237935}
+{"rank": 2, "world": 4, "bench": "stream", "kernel": "scale", "dtype": "fp32", "mb": 1024, "GBps": 161.71628966395693}
+{"rank": 0, "world": 4, "bench": "stream", "kernel": "scale", "dtype": "fp32", "mb": 1024, "GBps": 162.75106583601558}
+{"rank": 3, "world": 4, "bench": "stream", "kernel": "add", "dtype": "fp32", "mb": 1024, "GBps": 148.93089995267283}
+{"rank": 1, "world": 4, "bench": "stream", "kernel": "add", "dtype": "fp32", "mb": 1024, "GBps": 149.40566828324242}
+{"rank": 0, "world": 4, "bench": "stream", "kernel": "add", "dtype": "fp32", "mb": 1024, "GBps": 149.4364483970135}
+{"rank": 2, "world": 4, "bench": "stream", "kernel": "add", "dtype": "fp32", "mb": 1024, "GBps": 148.8361133847526}
+{"rank": 2, "world": 4, "bench": "stream", "kernel": "triad", "dtype": "fp32", "mb": 1024, "GBps": 93.6556827979011}
+{"rank": 1, "world": 4, "bench": "stream", "kernel": "triad", "dtype": "fp32", "mb": 1024, "GBps": 93.5587131833567}
+{"rank": 3, "world": 4, "bench": "stream", "kernel": "triad", "dtype": "fp32", "mb": 1024, "GBps": 93.35756584263301}
+{"rank": 0, "world": 4, "bench": "stream", "kernel": "triad", "dtype": "fp32", "mb": 1024, "GBps": 93.44772413978345}

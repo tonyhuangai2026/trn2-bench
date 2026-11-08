@@ -1,0 +1,174 @@
+W1107 12:53:34.980000 37985 torch/distributed/run.py:982] 
+W1107 12:53:34.980000 37985 torch/distributed/run.py:982] *****************************************
+W1107 12:53:34.980000 37985 torch/distributed/run.py:982] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W1107 12:53:34.980000 37985 torch/distributed/run.py:982] *****************************************
+{"bench": "gemm", "dtype": "bf16", "n": 1024, "chain": 16, "time_s": 0.01801518100182875, "tflops": 38.14531573622501}
+{"bench": "gemm", "dtype": "bf16", "n": 2048, "chain": 16, "time_s": 0.056535142997745425, "tflops": 97.24142979702445}
+{"bench": "gemm", "dtype": "bf16", "n": 4096, "chain": 16, "time_s": 0.3704512650001561, "tflops": 118.72132522214889}
+{"bench": "gemm", "dtype": "bf16", "n": 8192, "chain": 16, "time_s": 3.3020873310015304, "tflops": 106.55191265992504}
+{"bench": "gemm", "dtype": "bf16", "n": 16384, "chain": 4, "time_s": 7.37433268499808, "tflops": 95.42388061880926}
+                       NRT version: 2.35.30.0 (d2725ccb85ec45a12a6cda21994562156f6e1c23)
+2026-Nov-07 12:53:37.570570 38126:38126 ERROR   NRT:nrt_infodump                            Embedded FW version: unknown (unknown)
+2026-Nov-07 12:53:37.570883 38126:38126 ERROR   NRT:nrt_infodump                            CCOM not loaded
+2026-Nov-07 12:53:37.571100 38126:38126 ERROR   NRT:nrt_infodump                            NCFW version: 2.35.12.0 (0cd410fb83c08e6964e981b2fdc1f50713297caa)
+2026-Nov-07 12:53:37.571492 38126:38126 ERROR   NRT:nrt_infodump                            Instance ID: i-0xxxxxxxxxxxxxxxx
+2026-Nov-07 12:53:37.571791 38126:38126 ERROR   NRT:nrt_infodump                            Cluster ID: N/A
+2026-Nov-07 12:53:37.572004 38126:38126 ERROR   NRT:nrt_infodump                            Kernel: Linux 7.0.0-1014-aws #14~24.04.1-Ubuntu SMP PREEMPT Fri Sep 18 21:24:59 UTC 2026
+2026-Nov-07 12:53:37.572301 38126:38126 ERROR   NRT:nrt_infodump                            Nodename: ip-redacted
+2026-Nov-07 12:53:37.572863 38126:38126 ERROR   NRT:nrt_infodump                            Driver version: 2.31.7.0
+
+2026-Nov-07 12:53:37.573254 38126:38126 ERROR   NRT:nrt_infodump                            Failure: NRT_FAILURE in nrt_init()
+2026-Nov-07 12:53:37.573492 38126:38126 ERROR   NRT:nrt_infodump                            Visible cores: 2
+2026-Nov-07 12:53:37.573607 38126:38126 ERROR   NRT:nrt_infodump                            Environment:
+2026-Nov-07 12:53:37.573702 38126:38126 ERROR   NRT:nrt_infodump                                NEURON_LAUNCH_BLOCKING=0
+2026-Nov-07 12:53:37.573877 38126:38126 ERROR   NRT:nrt_infodump                                NEURON_RT_ALLOW_LEGACY_NEFF=1
+2026-Nov-07 12:53:37.574051 38126:38126 ERROR   NRT:nrt_infodump                                NEURON_RT_DBG_ZEROCOPY=1
+2026-Nov-07 12:53:37.574306 38126:38126 ERROR   NRT:nrt_infodump                                NEURON_RT_MAP_HBM=1
+2026-Nov-07 12:53:37.574482 38126:38126 ERROR   NRT:nrt_infodump                                NEURON_LOGICAL_NC_CONFIG=2
+2026-Nov-07 12:53:37.574667 38126:38126 ERROR   NRT:nrt_infodump                                NEURON_RT_ENABLE_DEVICE_MEMORY_OOM_LOG=0
+2026-Nov-07 12:53:37.574843 38126:38126 ERROR   NRT:nrt_infodump                            -------------8<-----------[ cut to here ]-----------8<------------
+Traceback (most recent call last):
+  File "/home/ubuntu/trn2-bench/scripts/01_gemm.py", line 13, in <module>
+    x = (torch.randn(n, n) * 0.01).to(dt).to(dev)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Failed to initialize Neuron Runtime: status code 1
+2026-Nov-07 12:53:37.594248 38127:38127 ERROR   NRT:nrt_allocate_neuron_cores               Logical Neuron Core(s) not available - Requested:lnc3-lnc3 Available:0 Logical Core size:2 (cores busy, ret=-16)
+2026-Nov-07 12:53:37.595273 38127:38127 ERROR   NRT:nrt_infodump                            Neuron runtime information - please include in any support request:
+2026-Nov-07 12:53:37.595931 38127:38127 ERROR   NRT:nrt_infodump                            ------------->8------------[ cut here ]------------>8-------------
+2026-Nov-07 12:53:37.596349 38127:38127 ERROR   NRT:nrt_infodump                            NRT version: 2.35.30.0 (d2725ccb85ec45a12a6cda21994562156f6e1c23)
+2026-Nov-07 12:53:37.596657 38127:38127 ERROR   NRT:nrt_infodump                            Embedded FW version: unknown (unknown)
+2026-Nov-07 12:53:37.596960 38127:38127 ERROR   NRT:nrt_infodump                            CCOM not loaded
+2026-Nov-07 12:53:37.597236 38127:38127 ERROR   NRT:nrt_infodump                            NCFW version: 2.35.12.0 (0cd410fb83c08e6964e981b2fdc1f50713297caa)
+2026-Nov-07 12:53:37.597573 38127:38127 ERROR   NRT:nrt_infodump                            Instance ID: i-0xxxxxxxxxxxxxxxx
+2026-Nov-07 12:53:37.597895 38127:38127 ERROR   NRT:nrt_infodump                            Cluster ID: N/A
+2026-Nov-07 12:53:37.598113 38127:38127 ERROR   NRT:nrt_infodump                            Kernel: Linux 7.0.0-1014-aws #14~24.04.1-Ubuntu SMP PREEMPT Fri Sep 18 21:24:59 UTC 2026
+2026-Nov-07 12:53:37.598399 38127:38127 ERROR   NRT:nrt_infodump                            Nodename: ip-redacted
+2026-Nov-07 12:53:37.598967 38127:38127 ERROR   NRT:nrt_infodump                            Driver version: 2.31.7.0
+
+2026-Nov-07 12:53:37.599481 38127:38127 ERROR   NRT:nrt_infodump                            Failure: NRT_FAILURE in nrt_init()
+2026-Nov-07 12:53:37.599807 38127:38127 ERROR   NRT:nrt_infodump                            Visible cores: 3
+2026-Nov-07 12:53:37.600034 38127:38127 ERROR   NRT:nrt_infodump                            Environment:
+2026-Nov-07 12:53:37.600290 38127:38127 ERROR   NRT:nrt_infodump                                NEURON_LAUNCH_BLOCKING=0
+2026-Nov-07 12:53:37.600590 38127:38127 ERROR   NRT:nrt_infodump                                NEURON_RT_ALLOW_LEGACY_NEFF=1
+2026-Nov-07 12:53:37.600887 38127:38127 ERROR   NRT:nrt_infodump                                NEURON_RT_DBG_ZEROCOPY=1
+2026-Nov-07 12:53:37.601160 38127:38127 ERROR   NRT:nrt_infodump                                NEURON_RT_MAP_HBM=1
+2026-Nov-07 12:53:37.601742 38127:38127 ERROR   NRT:nrt_infodump                                NEURON_LOGICAL_NC_CONFIG=2
+2026-Nov-07 12:53:37.602057 38127:38127 ERROR   NRT:nrt_infodump                                NEURON_RT_ENABLE_DEVICE_MEMORY_OOM_LOG=0
+2026-Nov-07 12:53:37.602438 38127:38127 ERROR   NRT:nrt_infodump                            -------------8<-----------[ cut to here ]-----------8<------------
+Traceback (most recent call last):
+  File "/home/ubuntu/trn2-bench/scripts/01_gemm.py", line 13, in <module>
+    x = (torch.randn(n, n) * 0.01).to(dt).to(dev)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Failed to initialize Neuron Runtime: status code 1
+2026-Nov-07 12:53:37.628277 38124:38124 ERROR   NRT:nrt_allocate_neuron_cores               Logical Neuron Core(s) not available - Requested:lnc0-lnc0 Available:0 Logical Core size:2 (cores busy, ret=-16)
+2026-Nov-07 12:53:37.628912 38124:38124 ERROR   NRT:nrt_infodump                            Neuron runtime information - please include in any support request:
+2026-Nov-07 12:53:37.629316 38124:38124 ERROR   NRT:nrt_infodump                            ------------->8------------[ cut here ]------------>8-------------
+2026-Nov-07 12:53:37.629655 38124:38124 ERROR   NRT:nrt_infodump                            NRT version: 2.35.30.0 (d2725ccb85ec45a12a6cda21994562156f6e1c23)
+2026-Nov-07 12:53:37.629976 38124:38124 ERROR   NRT:nrt_infodump                            Embedded FW version: unknown (unknown)
+2026-Nov-07 12:53:37.630366 38124:38124 ERROR   NRT:nrt_infodump                            CCOM not loaded
+2026-Nov-07 12:53:37.630670 38124:38124 ERROR   NRT:nrt_infodump                            NCFW version: 2.35.12.0 (0cd410fb83c08e6964e981b2fdc1f50713297caa)
+2026-Nov-07 12:53:37.630993 38124:38124 ERROR   NRT:nrt_infodump                            Instance ID: i-0xxxxxxxxxxxxxxxx
+2026-Nov-07 12:53:37.631387 38124:38124 ERROR   NRT:nrt_infodump                            Cluster ID: N/A
+2026-Nov-07 12:53:37.631616 38124:38124 ERROR   NRT:nrt_infodump                            Kernel: Linux 7.0.0-1014-aws #14~24.04.1-Ubuntu SMP PREEMPT Fri Sep 18 21:24:59 UTC 2026
+2026-Nov-07 12:53:37.631930 38124:38124 ERROR   NRT:nrt_infodump                            Nodename: ip-redacted
+2026-Nov-07 12:53:37.632279 38124:38124 ERROR   NRT:nrt_infodump                            Driver version: 2.31.7.0
+
+2026-Nov-07 12:53:37.632673 38124:38124 ERROR   NRT:nrt_infodump                            Failure: NRT_FAILURE in nrt_init()
+2026-Nov-07 12:53:37.632981 38124:38124 ERROR   NRT:nrt_infodump                            Visible cores: 0
+2026-Nov-07 12:53:37.633162 38124:38124 ERROR   NRT:nrt_infodump                            Environment:
+2026-Nov-07 12:53:37.633476 38124:38124 ERROR   NRT:nrt_infodump                                NEURON_LAUNCH_BLOCKING=0
+2026-Nov-07 12:53:37.633942 38124:38124 ERROR   NRT:nrt_infodump                                NEURON_RT_ALLOW_LEGACY_NEFF=1
+2026-Nov-07 12:53:37.634486 38124:38124 ERROR   NRT:nrt_infodump                                NEURON_RT_DBG_ZEROCOPY=1
+2026-Nov-07 12:53:37.634800 38124:38124 ERROR   NRT:nrt_infodump                                NEURON_RT_MAP_HBM=1
+2026-Nov-07 12:53:37.635101 38124:38124 ERROR   NRT:nrt_infodump                                NEURON_LOGICAL_NC_CONFIG=2
+2026-Nov-07 12:53:37.635489 38124:38124 ERROR   NRT:nrt_infodump                                NEURON_RT_ENABLE_DEVICE_MEMORY_OOM_LOG=0
+2026-Nov-07 12:53:37.635787 38124:38124 ERROR   NRT:nrt_infodump                            -------------8<-----------[ cut to here ]-----------8<------------
+Traceback (most recent call last):
+  File "/home/ubuntu/trn2-bench/scripts/01_gemm.py", line 13, in <module>
+    x = (torch.randn(n, n) * 0.01).to(dt).to(dev)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Failed to initialize Neuron Runtime: status code 1
+2026-Nov-07 12:53:37.661532 38125:38125 ERROR   NRT:nrt_allocate_neuron_cores               Logical Neuron Core(s) not available - Requested:lnc1-lnc1 Available:0 Logical Core size:2 (cores busy, ret=-16)
+2026-Nov-07 12:53:37.662380 38125:38125 ERROR   NRT:nrt_infodump                            Neuron runtime information - please include in any support request:
+2026-Nov-07 12:53:37.662711 38125:38125 ERROR   NRT:nrt_infodump                            ------------->8------------[ cut here ]------------>8-------------
+2026-Nov-07 12:53:37.663015 38125:38125 ERROR   NRT:nrt_infodump                            NRT version: 2.35.30.0 (d2725ccb85ec45a12a6cda21994562156f6e1c23)
+2026-Nov-07 12:53:37.663377 38125:38125 ERROR   NRT:nrt_infodump                            Embedded FW version: unknown (unknown)
+2026-Nov-07 12:53:37.663680 38125:38125 ERROR   NRT:nrt_infodump                            CCOM not loaded
+2026-Nov-07 12:53:37.663901 38125:38125 ERROR   NRT:nrt_infodump                            NCFW version: 2.35.12.0 (0cd410fb83c08e6964e981b2fdc1f50713297caa)
+2026-Nov-07 12:53:37.664238 38125:38125 ERROR   NRT:nrt_infodump                            Instance ID: i-0xxxxxxxxxxxxxxxx
+2026-Nov-07 12:53:37.664538 38125:38125 ERROR   NRT:nrt_infodump                            Cluster ID: N/A
+2026-Nov-07 12:53:37.664756 38125:38125 ERROR   NRT:nrt_infodump                            Kernel: Linux 7.0.0-1014-aws #14~24.04.1-Ubuntu SMP PREEMPT Fri Sep 18 21:24:59 UTC 2026
+2026-Nov-07 12:53:37.665076 38125:38125 ERROR   NRT:nrt_infodump                            Nodename: ip-redacted
+2026-Nov-07 12:53:37.665528 38125:38125 ERROR   NRT:nrt_infodump                            Driver version: 2.31.7.0
+
+2026-Nov-07 12:53:37.665923 38125:38125 ERROR   NRT:nrt_infodump                            Failure: NRT_FAILURE in nrt_init()
+2026-Nov-07 12:53:37.666259 38125:38125 ERROR   NRT:nrt_infodump                            Visible cores: 1
+2026-Nov-07 12:53:37.666484 38125:38125 ERROR   NRT:nrt_infodump                            Environment:
+2026-Nov-07 12:53:37.666708 38125:38125 ERROR   NRT:nrt_infodump                                NEURON_LAUNCH_BLOCKING=0
+2026-Nov-07 12:53:37.667007 38125:38125 ERROR   NRT:nrt_infodump                                NEURON_RT_ALLOW_LEGACY_NEFF=1
+2026-Nov-07 12:53:37.667360 38125:38125 ERROR   NRT:nrt_infodump                                NEURON_RT_DBG_ZEROCOPY=1
+2026-Nov-07 12:53:37.667656 38125:38125 ERROR   NRT:nrt_infodump                                NEURON_RT_MAP_HBM=1
+2026-Nov-07 12:53:37.667960 38125:38125 ERROR   NRT:nrt_infodump                                NEURON_LOGICAL_NC_CONFIG=2
+2026-Nov-07 12:53:37.668273 38125:38125 ERROR   NRT:nrt_infodump                                NEURON_RT_ENABLE_DEVICE_MEMORY_OOM_LOG=0
+2026-Nov-07 12:53:37.668482 38125:38125 ERROR   NRT:nrt_infodump                            -------------8<-----------[ cut to here ]-----------8<------------
+Traceback (most recent call last):
+  File "/home/ubuntu/trn2-bench/scripts/01_gemm.py", line 13, in <module>
+    x = (torch.randn(n, n) * 0.01).to(dt).to(dev)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Failed to initialize Neuron Runtime: status code 1
+W1107 12:53:38.144000 37985 torch/distributed/elastic/multiprocessing/api.py:1028] Sending process 38124 closing signal SIGTERM
+W1107 12:53:38.145000 37985 torch/distributed/elastic/multiprocessing/api.py:1028] Sending process 38125 closing signal SIGTERM
+W1107 12:53:38.145000 37985 torch/distributed/elastic/multiprocessing/api.py:1028] Sending process 38127 closing signal SIGTERM
+E1107 12:53:38.178000 37985 torch/distributed/elastic/multiprocessing/api.py:1002] failed (exitcode: 1) local_rank: 2 (pid: 38126) of binary: /opt/aws_neuronx_venv_torch_neuronx_2_14_0/bin/python3
+Traceback (most recent call last):
+  File "/opt/aws_neuronx_venv_torch_neuronx_2_14_0/bin/torchrun", line 8, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/opt/aws_neuronx_venv_torch_neuronx_2_14_0/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 380, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/opt/aws_neuronx_venv_torch_neuronx_2_14_0/lib/python3.12/site-packages/torch/distributed/run.py", line 1138, in main
+    run(args)
+  File "/opt/aws_neuronx_venv_torch_neuronx_2_14_0/lib/python3.12/site-packages/torch/distributed/run.py", line 1129, in run
+    elastic_launch(
+  File "/opt/aws_neuronx_venv_torch_neuronx_2_14_0/lib/python3.12/site-packages/torch/distributed/launcher/api.py", line 197, in __call__
+    return launch_agent(
+           ^^^^^^^^^^^^^
+  File "/opt/aws_neuronx_venv_torch_neuronx_2_14_0/lib/python3.12/site-packages/torch/distributed/launcher/api.py", line 386, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+01_gemm.py FAILED
+------------------------------------------------------------
+Failures:
+[1]:
+  time      : 2026-11-07_12:53:38
+  host      : ip-redacted.us-east-2.compute.internal
+  rank      : 0 (local_rank: 0)
+  exitcode  : -15 (pid: 38124)  (SIGTERM)
+  error_file: <N/A>
+  traceback : Signal 15 (SIGTERM) received by PID 38124
+[2]:
+  time      : 2026-11-07_12:53:38
+  host      : ip-redacted.us-east-2.compute.internal
+  rank      : 1 (local_rank: 1)
+  exitcode  : -15 (pid: 38125)  (SIGTERM)
+  error_file: <N/A>
+  traceback : Signal 15 (SIGTERM) received by PID 38125
+[3]:
+  time      : 2026-11-07_12:53:38
+  host      : ip-redacted.us-east-2.compute.internal
+  rank      : 3 (local_rank: 3)
+  exitcode  : -15 (pid: 38127)  (SIGTERM)
+  error_file: <N/A>
+  traceback : Signal 15 (SIGTERM) received by PID 38127
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2026-11-07_12:53:38
+  host      : ip-redacted.us-east-2.compute.internal
+  rank      : 2 (local_rank: 2)
+  exitcode  : 1 (pid: 38126) 
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================

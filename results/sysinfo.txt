@@ -1,0 +1,49 @@
++ neuron-ls
+instance-type: trn2.48xlarge
+instance-id: i-0xxxxxxxxxxxxxxxx
+logical-neuroncore-config: 2
++--------+--------+----------+--------+---------------+--------------+---------------+------+
+| NEURON | NEURON |  NEURON  | NEURON |   CONNECTED   |     PCI      |      CPU      | NUMA |
+| DEVICE | CORES  | CORE IDS | MEMORY |    DEVICES    |     BDF      |   AFFINITY    | NODE |
++--------+--------+----------+--------+---------------+--------------+---------------+------+
+| 0      | 4      | 0-3      | 96 GB  | 12, 3, 4, 1   | 0000:cc:00.0 | 48-95,144-191 | 1    |
+| 1      | 4      | 4-7      | 96 GB  | 13, 0, 5, 2   | 0000:b5:00.0 | 48-95,144-191 | 1    |
+| 2      | 4      | 8-11     | 96 GB  | 14, 1, 6, 3   | 0000:b6:00.0 | 48-95,144-191 | 1    |
+| 3      | 4      | 12-15    | 96 GB  | 15, 2, 7, 0   | 0000:cb:00.0 | 48-95,144-191 | 1    |
+| 4      | 4      | 16-19    | 96 GB  | 0, 7, 8, 5    | 0000:6f:00.0 | 0-47,96-143   | 0    |
+| 5      | 4      | 20-23    | 96 GB  | 1, 4, 9, 6    | 0000:58:00.0 | 0-47,96-143   | 0    |
+| 6      | 4      | 24-27    | 96 GB  | 2, 5, 10, 7   | 0000:59:00.0 | 0-47,96-143   | 0    |
+| 7      | 4      | 28-31    | 96 GB  | 3, 6, 11, 4   | 0000:6e:00.0 | 0-47,96-143   | 0    |
+| 8      | 4      | 32-35    | 96 GB  | 4, 11, 12, 9  | 0000:9b:00.0 | 0-47,96-143   | 0    |
+| 9      | 4      | 36-39    | 96 GB  | 5, 8, 13, 10  | 0000:84:00.0 | 0-47,96-143   | 0    |
+| 10     | 4      | 40-43    | 96 GB  | 6, 9, 14, 11  | 0000:85:00.0 | 0-47,96-143   | 0    |
+| 11     | 4      | 44-47    | 96 GB  | 7, 10, 15, 8  | 0000:9a:00.0 | 0-47,96-143   | 0    |
+| 12     | 4      | 48-51    | 96 GB  | 8, 15, 0, 13  | 0000:f8:00.0 | 48-95,144-191 | 1    |
+| 13     | 4      | 52-55    | 96 GB  | 9, 12, 1, 14  | 0000:e1:00.0 | 48-95,144-191 | 1    |
+| 14     | 4      | 56-59    | 96 GB  | 10, 13, 2, 15 | 0000:e2:00.0 | 48-95,144-191 | 1    |
+| 15     | 4      | 60-63    | 96 GB  | 11, 14, 3, 12 | 0000:f7:00.0 | 48-95,144-191 | 1    |
++--------+--------+----------+--------+---------------+--------------+---------------+------+
++ neuronx-cc --version
++ head -3
+/home/ubuntu/trn2-bench/scripts/00_setup.sh: line 10: neuronx-cc: command not found
++ dpkg -l
++ grep -i neuron
+hi  aws-neuronx-collectives                2.35.43.0-354ad3064                              amd64        AWS Neuron Collectives Library
+hi  aws-neuronx-dkms                       2.31.7.0                                         all          aws-neuronx driver in DKMS format.
+hi  aws-neuronx-oci-hook                   2.19.65.0                                        amd64        Neuron oci hook package
+hi  aws-neuronx-runtime-lib                2.35.30.0-d2725ccb8                              amd64        neuron_runtime built using CMake
+hi  aws-neuronx-tools                      2.33.38.0-f874d5618                              amd64        Neuron profile and debug tools
++ ls /opt
++ grep -i venv
+aws_neuronx_venv_jax_0_10
+aws_neuronx_venv_pytorch_inference_vllm_0_29_0_1_2_0
+aws_neuronx_venv_pytorch_inference_vllm_omni_0_29_0_0_2_0
+aws_neuronx_venv_torch_neuronx_2_14_0
++ nproc
+192
++ free -g
+               total        used        free      shared  buff/cache   available
+Mem:            1999          11        1993           0           1        1988
+Swap:              0           0           0
++ uname -a
+Linux ip-redacted 7.0.0-1014-aws #14~24.04.1-Ubuntu SMP PREEMPT Fri Sep 18 21:24:59 UTC 2026 x86_64 x86_64 x86_64 GNU/Linux

@@ -1,0 +1,13 @@
+=== 13:38:38 throughput qwen3-32b-tp32 tp=32
+WARNING 11-07 14:01:00 [utils.py:645] [shutdown] Process manager: force killing remaining process EngineCore pid 768365
+(EngineCore pid=768365) WARNING 11-07 14:01:00 [multiproc_executor.py:484] [shutdown] Executor: workers still running after grace period; sending SIGTERM count=32
+Throughput: 5.97 requests/s, 6874.64 total tokens/s, 763.85 output tokens/s
+Total num prompt tokens:  65536
+Total num output tokens:  8192
+=== 14:01:03 latency qwen3-32b-tp32
+WARNING 11-07 14:22:04 [utils.py:640] [shutdown] Process manager: force killing remaining processes count=1
+WARNING 11-07 14:22:04 [utils.py:645] [shutdown] Process manager: force killing remaining process EngineCore pid 2049762
+(EngineCore pid=2049762) WARNING 11-07 14:22:04 [multiproc_executor.py:484] [shutdown] Executor: workers still running after grace period; sending SIGTERM count=32
+/usr/lib/python3.12/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 480 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+MODEL1_DONE

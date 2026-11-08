@@ -1,0 +1,4 @@
+{"rank": 0, "world": 1, "bench": "stream", "kernel": "copy", "dtype": "fp32", "mb": 1024, "GBps": 80.75340688286683}
+{"rank": 0, "world": 1, "bench": "stream", "kernel": "scale", "dtype": "fp32", "mb": 1024, "GBps": 162.5517188450253}
+{"rank": 0, "world": 1, "bench": "stream", "kernel": "add", "dtype": "fp32", "mb": 1024, "GBps": 149.05392696584812}
+{"rank": 0, "world": 1, "bench": "stream", "kernel": "triad", "dtype": "fp32", "mb": 1024, "GBps": 93.28323638278817}

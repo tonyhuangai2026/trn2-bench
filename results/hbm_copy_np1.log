@@ -1,0 +1,144 @@
+2026-Nov-07 13:02:08.307224 56627:56808 ERROR  TDRV:exec_request_process_errors             (FATAL-RT-UNDEFINED-STATE) [ND 0][NC 4] execution timeout (30000 ms) on model module.neff, waiting for execution completion notification
+2026-Nov-07 13:02:08.310754 56627:56808 ERROR  TDRV:exec_print_instruction_pointers         [ND 0][NC 4] Instruction pointers [physical (neff)]: Tensor 0x8005c05a9140 () Scalar 0x80010172a980 () GPSIMD 0x800103441500 (40466) Vector 0x8001025ebf40 () Sync 0x800104019640 () 
+2026-Nov-07 13:02:08.311696 56627:56808 ERROR  TDRV:exec_print_semaphore_values             [ND 0][NC 4] Semaphore values 0=4 2=1 3=40438 4=57 6=108 8=5 10=8192 11=8192 12=8192 13=8192 14=8192 15=8192 16=8192 17=8192 18=8192 19=8192 20=8192 21=8192 22=8192 23=8192 24=8192 25=8192 26=44528 27=44528 28=44528 29=44528 30=44528 31=44528 32=44528 33=44528 34=44512 35=44512 36=44512 37=44512 38=44512 39=44512 40=44512 41=44512 42=16 43=16 44=12 45=12 
+2026-Nov-07 13:02:08.312439 56627:56808 ERROR  TDRV:exec_request_process_errors             (FATAL-RT-UNDEFINED-STATE) [ND 0][NC 5] execution timeout (30000 ms) on model module.neff, waiting for execution completion notification
+2026-Nov-07 13:02:08.315441 56627:56808 ERROR  TDRV:exec_print_instruction_pointers         [ND 0][NC 5] Instruction pointers [physical (neff)]: Tensor 0x8005c05a1140 () Scalar 0x800101002d00 () GPSIMD 0x8001031014c0 (40465) Vector 0x800101d4bec0 () Sync 0x800103a51840 () 
+2026-Nov-07 13:02:08.316440 56627:56808 ERROR  TDRV:exec_print_semaphore_values             [ND 0][NC 5] Semaphore values 0=4 2=1 3=40438 4=56 6=106 8=5 10=44528 11=44528 12=44528 13=44528 14=44528 15=44528 16=44528 17=44528 18=44512 19=44512 20=44512 21=44512 22=44512 23=44512 24=44512 25=44512 26=16 27=16 28=12 29=12 
+2026-Nov-07 13:02:08.317115 56627:56808 ERROR  TDRV:print_dma_abort_matrix                  Runtime DMA Abort Detected for Engines:
+----------------------------------------------------------------------------------------------------------
+|ND   |NC   |Engine  |Queue Idx |Queue               |TX Cause                 |RX Cause                 |
+----------------------------------------------------------------------------------------------------------
+|0    |4    |65      |0         |qActDynamicHW_1     |TX_DATA_AXI_TIMEOUT_ERROR|RDR_DATA_AXI_RESPONSE_ERROR|
+----------------------------------------------------------------------------------------------------------
+|0    |4    |65      |1         |qPoolDynamic_1      |TX_DATA_AXI_TIMEOUT_ERROR|RDR_DATA_AXI_RESPONSE_ERROR|
+----------------------------------------------------------------------------------------------------------
+|0    |4    |65      |2         |qSPDynamicHW_1      |TX_DATA_AXI_TIMEOUT_ERROR|RDR_DATA_AXI_RESPONSE_ERROR|
+----------------------------------------------------------------------------------------------------------
+|0    |4    |65      |14        |TPB_ENG:1           |TX_DATA_AXI_TIMEOUT_ERROR|RDR_DATA_AXI_RESPONSE_ERROR|
+----------------------------------------------------------------------------------------------------------
+|0    |4    |67      |0         |qActDynamicHW_3     |TX_DATA_AXI_TIMEOUT_ERROR|RDR_DATA_AXI_RESPONSE_ERROR|
+----------------------------------------------------------------------------------------------------------
+|0    |4    |67      |1         |qPoolDynamic_3      |TX_DATA_AXI_TIMEOUT_ERROR|RDR_DATA_AXI_RESPONSE_ERROR|
+----------------------------------------------------------------------------------------------------------
+|0    |4    |67      |2         |qSPDynamicHW_3      |TX_DATA_AXI_TIMEOUT_ERROR|RDR_DATA_AXI_RESPONSE_ERROR|
+----------------------------------------------------------------------------------------------------------
+|0    |4    |67      |14        |TPB_ENG:3           |TX_DATA_AXI_TIMEOUT_ERROR|RDR_DATA_AXI_RESPONSE_ERROR|
+----------------------------------------------------------------------------------------------------------
+|0    |4    |73      |0         |qActDynamicHW_9     |TX_DATA_AXI_TIMEOUT_ERROR|RDR_DATA_AXI_RESPONSE_ERROR|
+----------------------------------------------------------------------------------------------------------
+|0    |4    |73      |1         |qPoolDynamic_9      |TX_DATA_AXI_TIMEOUT_ERROR|RDR_DATA_AXI_RESPONSE_ERROR|
+----------------------------------------------------------------------------------------------------------
+|0    |4    |73      |2         |qSPDynamicHW_9      |TX_DATA_AXI_TIMEOUT_ERROR|RDR_DATA_AXI_RESPONSE_ERROR|
+----------------------------------------------------------------------------------------------------------
+|0    |4    |73      |14        |qActTbl             |TX_DATA_AXI_TIMEOUT_ERROR|RDR_DATA_AXI_RESPONSE_ERROR|
+----------------------------------------------------------------------------------------------------------
+|0    |4    |75      |0         |qActDynamicHW_11    |TX_DATA_AXI_TIMEOUT_ERROR|RDR_DATA_AXI_RESPONSE_ERROR|
+----------------------------------------------------------------------------------------------------------
+|0    |4    |75      |1         |qPoolDynamic_11     |TX_DATA_AXI_TIMEOUT_ERROR|RDR_DATA_AXI_RESPONSE_ERROR|
+----------------------------------------------------------------------------------------------------------
+|0    |4    |75      |2         |qSPDynamicHW_11     |TX_DATA_AXI_TIMEOUT_ERROR|RDR_DATA_AXI_RESPONSE_ERROR|
+----------------------------------------------------------------------------------------------------------
+|0    |5    |81      |0         |qPoolDynamic_1      |TX_DATA_AXI_TIMEOUT_ERROR|RDR_DATA_AXI_RESPONSE_ERROR|
+----------------------------------------------------------------------------------------------------------
+|0    |5    |81      |1         |qSPDynamicHW_1      |TX_DATA_AXI_TIMEOUT_ERROR|RDR_DATA_AXI_RESPONSE_ERROR|
+----------------------------------------------------------------------------------------------------------
+|0    |5    |81      |14        |TPB_ENG:1           |TX_DATA_AXI_TIMEOUT_ERROR|RDR_DATA_AXI_RESPONSE_ERROR|
+----------------------------------------------------------------------------------------------------------
+|0    |5    |83      |0         |qPoolDynamic_3      |TX_DATA_AXI_TIMEOUT_ERROR|RDR_DATA_AXI_RESPONSE_ERROR|
+----------------------------------------------------------------------------------------------------------
+|0    |5    |83      |1         |qSPDynamicHW_3      |TX_DATA_AXI_TIMEOUT_ERROR|RDR_DATA_AXI_RESPONSE_ERROR|
+----------------------------------------------------------------------------------------------------------
+|0    |5    |83      |14        |TPB_ENG:3           |TX_DATA_AXI_TIMEOUT_ERROR|RDR_DATA_AXI_RESPONSE_ERROR|
+----------------------------------------------------------------------------------------------------------
+|0    |5    |89      |0         |qPoolDynamic_9      |TX_DATA_AXI_TIMEOUT_ERROR|RDR_DATA_AXI_RESPONSE_ERROR|
+----------------------------------------------------------------------------------------------------------
+|0    |5    |89      |1         |qSPDynamicHW_9      |TX_DATA_AXI_TIMEOUT_ERROR|RDR_DATA_AXI_RESPONSE_ERROR|
+----------------------------------------------------------------------------------------------------------
+|0    |5    |89      |14        |qActTbl             |TX_DATA_AXI_TIMEOUT_ERROR|RDR_DATA_AXI_RESPONSE_ERROR|
+----------------------------------------------------------------------------------------------------------
+|0    |5    |91      |0         |qPoolDynamic_11     |TX_DATA_AXI_TIMEOUT_ERROR|RDR_DATA_AXI_RESPONSE_ERROR|
+----------------------------------------------------------------------------------------------------------
+|0    |5    |91      |1         |qSPDynamicHW_11     |TX_DATA_AXI_TIMEOUT_ERROR|RDR_DATA_AXI_RESPONSE_ERROR|
+----------------------------------------------------------------------------------------------------------
+
+2026-Nov-07 13:02:08.317160 56627:56808 ERROR  TDRV:exec_request_progress_one_step          [LNC 0] Failed to progress Neuron Core Exec State, error: 5
+2026-Nov-07 13:02:08.317591 56627:56808 ERROR  NMGR:tpb_xu_step                             Failed to progress exec state, Execution Unit[1] encountered fatal error [NRT_EXEC_HW_ERR_DMA_ABORT].
+2026-Nov-07 13:02:08.318015 56627:56808 ERROR   NRT:nrt_infodump                            Neuron runtime information - please include in any support request:
+2026-Nov-07 13:02:08.318492 56627:56808 ERROR   NRT:nrt_infodump                            ------------->8------------[ cut here ]------------>8-------------
+2026-Nov-07 13:02:08.318872 56627:56808 ERROR   NRT:nrt_infodump                            NRT version: 2.35.30.0 (d2725ccb85ec45a12a6cda21994562156f6e1c23)
+2026-Nov-07 13:02:08.320362 56627:56808 ERROR   NRT:nrt_infodump                            Embedded FW version: 1.25.36.0 (862ff86bbfacf42a954a4d280d1508fbbaf2c561) loaded from "libnrtucode_extisa.so"
+2026-Nov-07 13:02:08.320794 56627:56808 ERROR   NRT:nrt_infodump                            CCOM version: 0.35.43.0-"354ad3064" (compat 93)
+2026-Nov-07 13:02:08.321229 56627:56808 ERROR   NRT:nrt_infodump                            NCFW version: 2.35.12.0 (0cd410fb83c08e6964e981b2fdc1f50713297caa)
+2026-Nov-07 13:02:08.321598 56627:56808 ERROR   NRT:nrt_infodump                            Instance ID: i-0xxxxxxxxxxxxxxxx
+2026-Nov-07 13:02:08.321983 56627:56808 ERROR   NRT:nrt_infodump                            Cluster ID: 0
+2026-Nov-07 13:02:08.322250 56627:56808 ERROR   NRT:nrt_infodump                            Kernel: Linux 7.0.0-1014-aws #14~24.04.1-Ubuntu SMP PREEMPT Fri Sep 18 21:24:59 UTC 2026
+2026-Nov-07 13:02:08.322618 56627:56808 ERROR   NRT:nrt_infodump                            Nodename: ip-redacted
+2026-Nov-07 13:02:08.323004 56627:56808 ERROR   NRT:nrt_infodump                            Driver version: 2.31.7.0
+
+2026-Nov-07 13:02:08.323578 56627:56808 ERROR   NRT:nrt_infodump                            Failure: NRT_EXEC_HW_ERR_DMA_ABORT in tpb_xu_step
+2026-Nov-07 13:02:08.323913 56627:56808 ERROR   NRT:nrt_infodump                            LNC: 0
+2026-Nov-07 13:02:08.324166 56627:56808 ERROR   NRT:nrt_infodump                            Visible cores: 0
+2026-Nov-07 13:02:08.324404 56627:56808 ERROR   NRT:nrt_infodump                            Environment:
+2026-Nov-07 13:02:08.324637 56627:56808 ERROR   NRT:nrt_infodump                                NEURON_LAUNCH_BLOCKING=0
+2026-Nov-07 13:02:08.324951 56627:56808 ERROR   NRT:nrt_infodump                                NEURON_RT_ALLOW_LEGACY_NEFF=1
+2026-Nov-07 13:02:08.325361 56627:56808 ERROR   NRT:nrt_infodump                                NEURON_RT_DBG_ZEROCOPY=1
+2026-Nov-07 13:02:08.325697 56627:56808 ERROR   NRT:nrt_infodump                                NEURON_RT_MAP_HBM=1
+2026-Nov-07 13:02:08.326273 56627:56808 ERROR   NRT:nrt_infodump                                NEURON_LOGICAL_NC_CONFIG=2
+2026-Nov-07 13:02:08.326473 56627:56808 ERROR   NRT:nrt_infodump                                NEURON_RT_ENABLE_DEVICE_MEMORY_OOM_LOG=0
+2026-Nov-07 13:02:08.326651 56627:56808 ERROR   NRT:nrt_infodump                            -------------8<-----------[ cut to here ]-----------8<------------
+Traceback (most recent call last):
+  File "/home/ubuntu/trn2-bench/scripts/05_hbm_copy.py", line 9, in <module>
+    wait(); barrier(); t = time.perf_counter()
+    ^^^^^^
+  File "/home/ubuntu/trn2-bench/scripts/common.py", line 11, in wait
+    def wait(): torch.neuron.synchronize()
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/source-repos/aws_neuronx_venv_torch_neuronx_2_14_0/torch-neuronx/torch_neuronx/neuron.py", line 462, in synchronize
+    torch_neuronx.synchronize(device)
+  File "/source-repos/aws_neuronx_venv_torch_neuronx_2_14_0/torch-neuronx/torch_neuronx/__init__.py", line 711, in synchronize
+    _C._neuron_synchronize(device_index)
+  File "/opt/aws_neuronx_venv_torch_neuronx_2_14_0/lib/python3.12/site-packages/torch/_dynamo/eval_frame.py", line 1548, in _fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+RuntimeError: NRT Execution error occurred on Neuron for operation=aten::normal_
+error message="NRT EXECUTION FAILED: Async execution failed with NRT status: 1203, A DMA engine encountered an unrecoverable error"
+Note: Neuron errors are reported asynchronously. The Python traceback shows where the
+error was detected (synchronization point), not necessarily where the failing operation
+was dispatched. For synchronous error reporting, set NEURON_LAUNCH_BLOCKING=1.
+2026-Nov-07 13:02:11.444567 56627:56627 ERROR  TDRV:consume_ready_exec_notification_v2      [ND 0][NC 4] NRT close timeout (100 ms) for TPBs
+2026-Nov-07 13:02:11.545517 56627:56627 ERROR  TDRV:consume_ready_exec_notification_v2      [ND 0][NC 4] NRT close timeout (100 ms) for TPBs
+2026-Nov-07 13:02:11.647003 56627:56627 ERROR  TDRV:consume_ready_exec_notification_v2      [ND 0][NC 5] NRT close timeout (100 ms) for TPBs
+2026-Nov-07 13:02:11.747625 56627:56627 ERROR  TDRV:consume_ready_exec_notification_v2      [ND 0][NC 5] NRT close timeout (100 ms) for TPBs
+E1107 13:02:12.324000 56506 torch/distributed/elastic/multiprocessing/api.py:1002] failed (exitcode: 1) local_rank: 0 (pid: 56627) of binary: /opt/aws_neuronx_venv_torch_neuronx_2_14_0/bin/python3
+Traceback (most recent call last):
+  File "/opt/aws_neuronx_venv_torch_neuronx_2_14_0/bin/torchrun", line 8, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/opt/aws_neuronx_venv_torch_neuronx_2_14_0/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 380, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/opt/aws_neuronx_venv_torch_neuronx_2_14_0/lib/python3.12/site-packages/torch/distributed/run.py", line 1138, in main
+    run(args)
+  File "/opt/aws_neuronx_venv_torch_neuronx_2_14_0/lib/python3.12/site-packages/torch/distributed/run.py", line 1129, in run
+    elastic_launch(
+  File "/opt/aws_neuronx_venv_torch_neuronx_2_14_0/lib/python3.12/site-packages/torch/distributed/launcher/api.py", line 197, in __call__
+    return launch_agent(
+           ^^^^^^^^^^^^^
+  File "/opt/aws_neuronx_venv_torch_neuronx_2_14_0/lib/python3.12/site-packages/torch/distributed/launcher/api.py", line 386, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+05_hbm_copy.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2026-11-07_13:02:12
+  host      : ip-redacted.us-east-2.compute.internal
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 56627) 
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================

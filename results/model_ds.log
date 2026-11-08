@@ -1,0 +1,13 @@
+=== 14:23:08 throughput ds-r1-70b-tp64 tp=64
+WARNING 11-07 14:56:38 [utils.py:645] [shutdown] Process manager: force killing remaining process EngineCore pid 3331124
+(EngineCore pid=3331124) WARNING 11-07 14:56:38 [multiproc_executor.py:484] [shutdown] Executor: workers still running after grace period; sending SIGTERM count=64
+Throughput: 4.29 requests/s, 4938.33 total tokens/s, 548.70 output tokens/s
+Total num prompt tokens:  65536
+Total num output tokens:  8192
+=== 14:56:42 latency ds-r1-70b-tp64
+(EngineCore pid=1791912) INFO 11-07 15:27:34 [multiproc_executor.py:472] [shutdown] Executor: waiting for worker exit count=64
+(Worker_TP0 pid=1792240) INFO 11-07 15:27:34 [multiproc_executor.py:836] Parent process exited, terminating worker queues
+WARNING 11-07 15:27:39 [utils.py:640] [shutdown] Process manager: force killing remaining processes count=1
+WARNING 11-07 15:27:39 [utils.py:645] [shutdown] Process manager: force killing remaining process EngineCore pid 1791912
+(EngineCore pid=1791912) WARNING 11-07 15:27:39 [multiproc_executor.py:484] [shutdown] Executor: workers still running after grace period; sending SIGTERM count=64
+MODEL2_DONE

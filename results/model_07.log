@@ -1,0 +1,11 @@
+=== 15:28:24 decode-heavy qwen3-32b-tp32 tp=32
+(EngineCore pid=240062) WARNING 11-07 15:49:47 [multiproc_executor.py:484] [shutdown] Executor: workers still running after grace period; sending SIGTERM count=32
+Throughput: 2.15 requests/s, 3296.52 total tokens/s, 1098.84 output tokens/s
+Total num prompt tokens:  65536
+Total num output tokens:  32768
+=== 15:49:50 decode-heavy ds-r1-70b-tp64 tp=64
+(EngineCore pid=1520861) WARNING 11-07 16:21:18 [multiproc_executor.py:484] [shutdown] Executor: workers still running after grace period; sending SIGTERM count=64
+Throughput: 1.51 requests/s, 2321.58 total tokens/s, 773.86 output tokens/s
+Total num prompt tokens:  65536
+Total num output tokens:  32768
+DECODE_HEAVY_DONE

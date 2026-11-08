@@ -1,0 +1,8 @@
+=== 12:53:32 gemm_bf16_np4 (np=4)
+=== 12:53:38 gemm_bf16_np64 (np=64)
+=== 12:54:06 stream_np4 (np=4)
+{"bench": "stream", "kernel": "copy", "dtype": "fp32", "mb": 1024, "GBps": 80.76305348472651}
+{"bench": "stream", "kernel": "scale", "dtype": "fp32", "mb": 1024, "GBps": 162.75106583601558}
+{"bench": "stream", "kernel": "add", "dtype": "fp32", "mb": 1024, "GBps": 149.4364483970135}
+{"bench": "stream", "kernel": "triad", "dtype": "fp32", "mb": 1024, "GBps": 93.44772413978345}
+=== 12:54:35 stream_np64 (np=64)

@@ -1,0 +1,3 @@
+{"rank": 0, "world": 1, "bench": "gemm", "dtype": "fp32", "n": 2048, "chain": 16, "time_s": 0.15641636999862385, "tflops": 35.14694874282255}
+{"rank": 0, "world": 1, "bench": "gemm", "dtype": "fp32", "n": 4096, "chain": 16, "time_s": 1.2119885720021557, "tflops": 36.28785462752843}
+{"rank": 0, "world": 1, "bench": "gemm", "dtype": "fp32", "n": 8192, "chain": 16, "time_s": 10.686915521000628, "tflops": 32.922850395600065}
